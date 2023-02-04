@@ -1,13 +1,18 @@
 <script lang="ts">
 	import bgMainDesktop from '$lib/assets/bg-main-desktop.png';
-	import bgCardFront from '$lib/assets/bg-card-front.png';
 	import bgCardBack from '$lib/assets/bg-card-back.png';
 	import CcForm from '$lib/components/CCForm.svelte';
+	import CardFront from '$lib/components/CardFront.svelte';
+
+	let name: string;
+	let expiryMonth: string;
+	let expiryYear: string;
+	let cardNumber: string;
 </script>
 
 <img src={bgMainDesktop} alt="side logo" srcset="" />
-<div class="card-front">
-	<img src={bgCardFront} alt="" class="card-front" />
+<div class="card">
+	<CardFront {name} {expiryMonth} {expiryYear} {cardNumber} />
 	<img src={bgCardBack} alt="" class="card-back" />
 </div>
 
