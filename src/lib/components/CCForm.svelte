@@ -1,20 +1,24 @@
-<script>
+<script lang="ts">
 	// something
+	export let name: string = '';
+	export let expiryMonth: string = '';
+	export let expiryYear: string = '';
+	export let cardNumber: string = '';
 </script>
 
 <form action="submit" class="cc-form" style="--width:400px">
 	<label>
 		Cardholder Name
-		<input type="text" placeholder="e.g. Jane Appleseed" />
+		<input type="text" placeholder="e.g. Jane Appleseed" value={name} />
 	</label>
 	<label>
 		Card Number
-		<input type="text" placeholder="e.g. 1234 5678 9123 000" />
+		<input type="text" placeholder="e.g. 1234 5678 9123 000" value={cardNumber} />
 	</label>
 	<label>
 		Exp. Date (MM/YY)
-		<input type="text" placeholder="MM" />
-		<input type="text" placeholder="YY" />
+		<input type="text" placeholder="MM" value={expiryMonth} />
+		<input type="text" placeholder="YY" value={expiryYear} />
 	</label>
 	<label>
 		CVC

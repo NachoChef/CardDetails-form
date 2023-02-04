@@ -10,13 +10,13 @@
 	let cardNumber: string;
 </script>
 
-<img src={bgMainDesktop} alt="side logo" srcset="" />
+<!-- <img src={bgMainDesktop} alt="side logo" srcset="" /> -->
 <div class="card">
 	<CardFront {name} {expiryMonth} {expiryYear} {cardNumber} />
-	<img src={bgCardBack} alt="" class="card-back" />
+	<!-- <img src={bgCardBack} alt="" class="card-back" /> -->
 </div>
 
-<CcForm />
+<CcForm bind:name bind:expiryMonth bind:expiryYear bind:cardNumber />
 
 <style>
 	/* def need a media query but will start with desktop */
