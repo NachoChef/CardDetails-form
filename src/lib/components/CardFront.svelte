@@ -25,25 +25,26 @@
 		background-repeat: no-repeat;
 		height: 250px;
 		width: 450px;
-		overflow: hidden;
+		position: relative;
 	}
 
 	.card-number {
 		font-size: 30px;
 		font-family: 'Comic Sans MS';
 		position: absolute;
-		top: 150px;
+		top: 140px;
 		letter-spacing: 4px;
 		text-align: center;
 		color: white;
-		display: block;
+		width: 100%;
 	}
 
 	.name {
 		font-size: 16px;
 		font-family: 'Open Sans', sans-serif;
-		position: relative;
+		position: absolute;
 		top: 200px;
+		left: 30px;
 		letter-spacing: 2px;
 		color: white;
 	}
@@ -51,8 +52,9 @@
 	.date {
 		font-size: 16px;
 		font-family: 'Open Sans', sans-serif;
-		position: relative;
-		top: 180px;
+		position: absolute;
+		top: 200px;
+		right: 30px;
 		letter-spacing: 2px;
 		color: white;
 	}
