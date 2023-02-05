@@ -4,25 +4,26 @@
 	export let expiryMonth: string = '';
 	export let expiryYear: string = '';
 	export let cardNumber: string = '';
+	export let cvc: string = '';
 </script>
 
 <form action="submit" class="cc-form" style="--width:400px">
 	<label>
 		Cardholder Name
-		<input type="text" placeholder="e.g. Jane Appleseed" value={name} />
+		<input type="text" placeholder="e.g. Jane Appleseed" bind:value={name} />
 	</label>
 	<label>
 		Card Number
-		<input type="text" placeholder="e.g. 1234 5678 9123 000" value={cardNumber} />
+		<input type="text" placeholder="e.g. 1234 5678 9123 000" bind:value={cardNumber} />
 	</label>
 	<label>
 		Exp. Date (MM/YY)
-		<input type="text" placeholder="MM" value={expiryMonth} />
-		<input type="text" placeholder="YY" value={expiryYear} />
+		<input type="text" placeholder="MM" bind:value={expiryMonth} />
+		<input type="text" placeholder="YY" bind:value={expiryYear} />
 	</label>
 	<label>
 		CVC
-		<input type="number" placeholder="e.g. 123" />
+		<input type="text" placeholder="e.g. 123" bind:value={cvc} />
 	</label>
 	<button class="btn">Confirm</button>
 </form>
@@ -40,20 +41,20 @@
 		justify-content: center;
 		align-items: center;
 		border-radius: 5px;
-		color: rgb(251, 242, 253);
-		background-color: rgb(34, 9, 48);
+		color: var(--white);
+		background-color: var(--very-dark-violet);
 	}
 
 	input {
 		border-radius: 5px;
 		height: 40px;
 		font-size: 1em;
-		border-style: 1px solid gray;
+		border-style: 1px solid var(--dark-grayish-violet);
 	}
 
 	label {
 		display: flex;
 		flex-direction: column;
-		color: rgb(31, 20, 37);
+		color: var(--very-dark-violet);
 	}
 </style>
