@@ -4,6 +4,7 @@
 	import CcForm from '$lib/components/CCForm.svelte';
 	import CardFront from '$lib/components/CardFront.svelte';
 	import '@fontsource/space-grotesk';
+	import CardBack from '$lib/components/CardBack.svelte';
 
 	let name: string = '';
 	let expiryMonth: string;
@@ -15,7 +16,7 @@
 <!-- <img src={bgMainDesktop} alt="side logo" srcset="" /> -->
 <div class="card">
 	<CardFront {name} {expiryMonth} {expiryYear} {cardNumber} />
-	<!-- <img src={bgCardBack} alt="" class="card-back" /> -->
+	<CardBack cvc="123" />
 </div>
 
 <CcForm bind:name bind:expiryMonth bind:expiryYear bind:cardNumber />
