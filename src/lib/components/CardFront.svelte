@@ -3,8 +3,8 @@
 	import cardLogo from '$lib/assets/card-logo.svg';
 
 	export let name: string = 'Jane Doe';
-	let expiryMonth: string = '00';
-	let expiryYear: string = '00';
+	export let expiryMonth: string = '00';
+	export let expiryYear: string = '00';
 	export let cardNumber: string = '0000000000000000';
 
 	function formatCardNumber(value: string) {

@@ -1,6 +1,4 @@
 <script lang="ts">
-	import bgMainDesktop from '$lib/assets/bg-main-desktop.png';
-	import bgCardBack from '$lib/assets/bg-card-back.png';
 	import CcForm from '$lib/components/CCForm.svelte';
 	import CardFront from '$lib/components/CardFront.svelte';
 	import '@fontsource/space-grotesk';
@@ -16,10 +14,10 @@
 <!-- <img src={bgMainDesktop} alt="side logo" srcset="" /> -->
 <div class="card">
 	<CardFront {name} {expiryMonth} {expiryYear} {cardNumber} />
-	<CardBack cvc="123" />
+	<CardBack {cvc} />
 </div>
 
-<CcForm bind:name bind:expiryMonth bind:expiryYear bind:cardNumber />
+<CcForm bind:name bind:expiryMonth bind:expiryYear bind:cardNumber bind:cvc />
 
 <style>
 	/* def need a media query but will start with desktop */
