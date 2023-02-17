@@ -5,7 +5,16 @@
 	export let name: string = 'Jane Doe';
 	let expiryMonth: string = '00';
 	let expiryYear: string = '00';
-	let cardNumber: string = '0000 0000 0000 0000';
+	export let cardNumber: string = '0000000000000000';
+
+	function formatCardNumber(value: string) {
+		cardNumber = value
+			.replace(/\s/g, '')
+			.replace(/(\d{4})/g, '$1 ')
+			.trim();
+	}
+
+	$: formatCardNumber(cardNumber);
 </script>
 
 <div class="card-front" style="--imgUrl:url({bgCardFront});">
@@ -29,6 +38,7 @@
 		background-repeat: no-repeat;
 		height: 250px;
 		width: 450px;
+		font-weight: 500;
 		position: relative;
 	}
 

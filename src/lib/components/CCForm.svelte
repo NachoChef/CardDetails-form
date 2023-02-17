@@ -14,16 +14,21 @@
 	</label>
 	<label>
 		Card Number
-		<input type="text" placeholder="e.g. 1234 5678 9123 000" bind:value={cardNumber} />
+		<input
+			type="text"
+			placeholder="e.g. 1234 5678 9123 000"
+			bind:value={cardNumber}
+			maxlength="16"
+		/>
 	</label>
 	<label>
 		Exp. Date (MM/YY)
-		<input type="text" placeholder="MM" bind:value={expiryMonth} />
-		<input type="text" placeholder="YY" bind:value={expiryYear} />
+		<input type="text" placeholder="MM" bind:value={expiryMonth} maxlength="2" />
+		<input type="text" placeholder="YY" bind:value={expiryYear} maxlength="2" />
 	</label>
 	<label>
 		CVC
-		<input type="text" placeholder="e.g. 123" bind:value={cvc} />
+		<input type="text" placeholder="e.g. 123" bind:value={cvc} maxlength="3" />
 	</label>
 	<button class="btn">Confirm</button>
 </form>
